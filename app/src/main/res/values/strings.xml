@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">CancerAware</string>
+    <string name="camera_x">CameraX</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="analyze">Analyze</string>
+    <string name="result">Analysis Results</string>
+
+    <string name="appTitle">CancerAware</string>
+    <string name="appSubTitle">Cancer Detection App</string>
+    <string name="imageSelect">Select Image</string>
+    <string name="book_mark">Bookmark</string>
+    <string name="resultDetection">Image Detected As:</string>
+    <string name="cancerArticles">Cancer Articles</string>
+    <string name="analyzeAgain">Analyze Again</string>
+    <string name="failed_to_classify">The initialization of the image classifier has failed. Please refer to the error logs for further details.</string>
+    <string name="label">Label</string>
+    <string name="score">Score: 0%</string>
+    <string name="analysisResult">Image Analysis Results</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="imageAnalyze">Analyze Image</string>
+    <string name="imagePreviewView">Preview Image</string>
+    <string name="gallery_Button">Add Image</string>
+    <string name="analyze_Button">Analyze</string>
+    <string name="articles_Button">Article</string>
+    <string name="bookmark_Button">Bookmark</string>
+    <string name="image_Delete_Button">Delete Image</string>
+    <string name="back_Button">Back</string>
+    <string name="imageResults">Image Results</string>
+    <string name="toogle_Button">ToggleButton</string>
+    <string name="articleTitle">Article Title</string>
+    <string name="articlePicture">Article Picture</string>
+    <string name="articleAuthor">Author</string>
+    <string name="articlePublisher">Publisher</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="readMore">Read More</string>
+    <string name="readMore_Button">Read More</string>
+    <string name="delete_Button">Delete</string>
+</resources>

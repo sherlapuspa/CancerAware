@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ResultActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/appTitle"
+            style="@style/sansSerif"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/appTitle"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/bookmark_toogle"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/appSubTitle"
+            style="@style/sansSerifLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/analysisResult"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@+id/appTitle"
+            tools:layout_editor_absoluteX="-16dp" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addImageView"
+            android:layout_width="match_parent"
+            android:layout_height="325dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appSubTitle">
+
+            <ImageView
+                android:id="@+id/result_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/imageResults"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pictureresults" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/resultDetection"
+            style="@style/sansSerifMedium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:text="@string/resultDetection"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/addImageView" />
+
+        <TextView
+            android:id="@+id/resultAnalysis"
+            style="@style/sansSerifCondensedMedium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/result"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/resultDetection" />
+
+        <ImageButton
+            android:id="@+id/analyzeButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_pink"
+            android:contentDescription="@string/analyze_Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resultAnalysis"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/sansSerifMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/analyzeAgain"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/analyzeButton"
+            app:layout_constraintEnd_toEndOf="@+id/analyzeButton"
+            app:layout_constraintStart_toStartOf="@+id/analyzeButton"
+            app:layout_constraintTop_toTopOf="@+id/analyzeButton" />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/back_Button"
+            app:layout_constraintBottom_toBottomOf="@+id/appTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appTitle"
+            app:srcCompat="@drawable/buttonback" />
+
+        <ToggleButton
+            android:id="@+id/bookmark_toogle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bookmarkno"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="@string/toogle_Button"
+            android:textOff=" "
+            android:textOn=" "
+            app:layout_constraintBottom_toBottomOf="@+id/appTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
